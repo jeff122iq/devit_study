@@ -11,11 +11,11 @@ let animal = {
    cat.age = 5;
    cat.childs.push("child 3");
     
-   console.log(cat.name, cat.age); // cat 5
-   console.log(cat.childs); // [ 'child 1', 'child 2', 'child 3' ]
+   console.log(cat.name, cat.age);
+   console.log(cat.childs);
     
-   console.log(animal.name, animal.age); // cat 5
-   console.log(animal.childs); // [ 'child 1', 'child 2', 'child 3' ]
+   console.log(animal.name, animal.age);
+   console.log(animal.childs);
     
    function clone(obj) {
     return obj;
