@@ -7,5 +7,4 @@ const createArr = (length, value) =>{
   }
   console.log(arr)
 }
-
-console.log(createArr(6, "STRING"))
+createArr(6, "STRING")
