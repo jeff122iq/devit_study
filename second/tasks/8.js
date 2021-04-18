@@ -13,8 +13,10 @@ const array = require("../index")
 // arrayCombine(array.testData, array.testData2)
 
 const arrayCombine = (key, value) => {
-  let obj = new Map()
-  obj[key][value]
+  console.log(key);
+  let obj = {[newKey = [key]]:value}
   return console.log(obj)
 }
 arrayCombine(array.testData, array.testData2)
+
+

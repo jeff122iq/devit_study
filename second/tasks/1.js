@@ -2,7 +2,7 @@ const array = require("../index")
 
 // 1. Сделать функцию поиска значений в массиве.
 const searchArray = (array, value) => {
-  let newArr = array.filter(item => item.toString().match(new RegExp(value.replace(/[\/i]/g,''), "i")))
+  let newArr = array.filter(item => item.toString().match(new RegExp(value.replace(/[\/a-z]/g,''), "i")))
   return newArr
 }
 let result = searchArray(array.testData, "/^raf.*/i")
