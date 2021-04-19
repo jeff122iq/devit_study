@@ -1,22 +1,14 @@
 const array = require("../index")
 
 // 2. Сделать функцию подсчета среднего значения, с возможностью исключения не числовых значений
-const arrReducer = (arr,skipNaN) => {
-    if(skipNaN) {
-      arr.forEach((a, b) => {
-        return (typeof a !== "number") ? arr = arr.slice(0, b) : ""
-      });
+
+const arrReducer = (arr, skipNaN) => {
+  let result = arr.reduce((accum, curr) => {
+    if (typeof curr !== "number" || skipNaN && Number.isNaN(curr)) {
+      return accum
     }
-   arr.forEach((a, b) => {
-     if(typeof a !== "number") {
-       let strList = Number(a = null)
-       arr = arr.slice(0, b);
-       arr.push(strList)
-     }
-   });
-    let result = arr.reduce((accum, curr ) => {
-      return accum + curr
-    })
+    return accum + curr
+  }, 0)
   console.log(Math.round(result / arr.length))
 }
 arrReducer(array.testData)
