@@ -9,7 +9,8 @@ const arrReducer = (arr, skipNaN) => {
     }
     return accum + curr
   }, 0)
-  console.log(Math.round(result / arr.length))
+  const onlyNum = skipNaN ? arr.filter(item => typeof item === "number").length : arr.length
+  console.log(Math.round(result / onlyNum))
 }
 arrReducer(array.testData)
 arrReducer(array.testData2)
