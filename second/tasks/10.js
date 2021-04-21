@@ -6,7 +6,7 @@ const arrayPlunk = (arr,path) => { //принимает 2 параметра: м
   let pathArr = path.split('.') // мы разделяем для того что бы в массиве было 2 значения
   arr.forEach(element => {
     const result = pathArr.reduce((accum,curr) => accum[curr],element) // разбираем путь с помощью reduce и ищем путь ел-та
-    console.log(result);
+    console.log(result)
   });
 }
-arrayPlunk (array.testData3,'email')
+arrayPlunk (array.testData3,'skills.php')

@@ -8,6 +8,6 @@ const subArray = (size, currentArr) => { // создаем функцию кот
     // которое мы указали в нашей функции
     arr[i] = currentArr.slice((i*size), (i*size) + size); // с помощью метода slice мы разбиваем наши еле-ты на подмассивы
   }
-  console.log(arr) // выводим результат
+  return arr // возвращает результат
 }
-subArray(3, array.testData)
+console.log(subArray(10, array.testData))

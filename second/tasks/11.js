@@ -7,6 +7,6 @@ const arrayUnique = (arr) => { // принимает массив
       unique.push(value)
     }
   }
-  console.log(unique); // выводим массив unique
+  return unique; // вернем массив unique
 }
-arrayUnique(array.testData.concat(array.testData2))
+console.log(arrayUnique(array.testData.concat(array.testData2)))

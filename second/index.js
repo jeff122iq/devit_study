@@ -1,4 +1,4 @@
-exports.testData = [1, 2, 1990, 85, 24, "Vasya", "colya@example.com", "Rafshan", "ashan@example.com", true, false];
+exports.testData = [1, 2, 1990, 85, 24, "Vasya", "colya@example.com", "Rafshan", "ashan@example.com", true, false, 100];
 exports.testData2 = [1, 2, 1990, 85, 24, 5, 7, 8.1];
 
 exports.testData3 = [
@@ -10,7 +10,7 @@ exports.testData3 = [
       php: 0,
       js: -1,
       madness: 10,
-      rage: 10
+      rage: 10,
     }
   },
   {

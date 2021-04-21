@@ -9,12 +9,12 @@ const arrayGet = (arr, path) => {
   // 1) Распарсить строку
   let a = path.match(new RegExp('[^.[\\]]+' + '|' + '\\[(?:' + '([^"\'][^[]*)' + '|' + '(["\'])((?:(?!\\2)[^\\\\]|\\\\.)*?)\\2' + ')\\]'+ '|' + '(?=(?:\\.|\\[\\])(?:\\.|\\[\\]|$))'
     , 'g'))
-  // 2) Проверяем с помощью includes наличие [, если она есть, то удаляем с помощью slice ], еслинет, то оставить item
+  // 2) Проверяем с помощью includes наличие [, если она есть, то удаляем с помощью slice ], если нет, то оставить item
   let b = a.map(item => item.includes("[") ? item.slice(1, item.indexOf("]")) : item)
   // 3) Проитерировать до нужного пути
   b.forEach(item => arr = arr[item])
-  // 4) Вывести результат
+  // 4) Вернуть результат
   return arr
 }
 
-console.log(arrayGet(array.testData4, '[17][0][0][0][11][0][name]'))
+console.log(arrayGet(array.testData4, '[5].name'))

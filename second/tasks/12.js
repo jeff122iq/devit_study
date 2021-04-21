@@ -5,6 +5,6 @@ const createArr = (length, value) => { //принимает 2 параметра
   for(let i = 0; i < length; i++) { // создаем цикл, в котором на каждую итерацию делать push нашего value пока i < length(6)
     arr.push(value) // пушим наши value
   }
-  console.log(arr) // выводим наш массив
+  return arr // возвращаем наш массив
 }
-createArr(6, 20)
+console.log(createArr(6, 20))
